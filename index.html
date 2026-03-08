@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thirugnanam P | Java Full-Stack Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Thirugnanam P, Java Full-Stack Developer specializing in scalable, real-time business solutions using Java, Spring Boot, and modern web technologies."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+            colors: {
+              primary: "#BB86FC",
+              bgDark: "#313233",
+              textPrimary: "rgba(233,233,233,0.87)",
+            },
+            boxShadow: {
+              soft: "0 20px 45px rgba(0,0,0,0.45)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body
+    class="bg-white text-slate-900 dark:bg-bgDark dark:text-textPrimary font-sans antialiased"
+  >
+    <!-- Sticky Header -->
+    <header
+      class="fixed inset-x-0 top-0 z-40 backdrop-blur-md bg-white/70 dark:bg-bgDark/70 border-b border-slate-200/60 dark:border-white/10"
+    >
+      <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+        <!-- Logo / Name -->
+        <a href="#home" class="flex items-center gap-2 group">
+          <div
+            class="h-9 w-9 rounded-xl bg-gradient-to-br from-primary/90 to-indigo-500 flex items-center justify-center shadow-soft"
+          >
+            <span class="text-xs font-bold text-white tracking-widest"
+              >TP</span
+            >
+          </div>
+          <div class="leading-tight">
+            <p
+              class="text-sm font-semibold tracking-tight group-hover:text-primary transition-colors"
+            >
+              Thirugnanam. P
+            </p>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400">
+              Java Full-Stack Developer
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="flex items-center gap-3">
+          <!-- Social Icons (Header) -->
+          <div class="hidden md:flex items-center gap-2 text-slate-500">
+            <a
+              href="https://www.linkedin.com/in/thirugnanam-p-0b3ba830b"
+              aria-label="LinkedIn"
+              class="icon-btn"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="h-4 w-4"
+                fill="currentColor"
+              >
+                <path
+                  d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.3 8.18h4.4V24H.3V8.18zM8.79 8.18h4.22v2.15h.06c.59-1.12 2.03-2.3 4.18-2.3 4.47 0 5.3 2.94 5.3 6.77V24h-4.4v-7.21c0-1.72-.03-3.93-2.39-3.93-2.39 0-2.76 1.87-2.76 3.8V24H8.79V8.18z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://github.com/Thirugnanam2001"
+              aria-label="GitHub"
+              class="icon-btn"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="h-4 w-4"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.05-.02-2.06-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.35-1.76-1.35-1.76-1.1-.76.08-.75.08-.75 1.22.09 1.87 1.26 1.87 1.26 1.08 1.85 2.84 1.32 3.53 1.01.11-.78.42-1.32.76-1.62-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.24-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.05.14 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.85 1.24 1.92 1.24 3.24 0 4.63-2.8 5.66-5.48 5.96.43.37.81 1.1.81 2.22 0 1.6-.02 2.88-.02 3.27 0 .32.22.7.82.58A12.01 12.01 0 0 0 24 12C24 5.37 18.63 0 12 0z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://drive.google.com/file/d/19JBt6wa-nGOfeJrAI0cmtgomjxVuVjMo/view?usp=drive_link"
+              aria-label="Resume"
+              class="icon-btn"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="h-4 w-4"
+                fill="currentColor"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6zm1 7V3.5L18.5 9H15z"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Theme Toggle -->
+          <button
+            id="theme-toggle"
+            type="button"
+            class="h-9 w-9 flex items-center justify-center rounded-full border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-black/30 shadow-sm hover:shadow-md hover:border-primary/70 transition"
+            aria-label="Toggle dark mode"
+          >
+            <span id="theme-toggle-icon" class="text-slate-700 dark:text-amber-300">
+              <!-- Icon handled by JS -->
+            </span>
+          </button>
+
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-toggle"
+            class="md:hidden h-9 w-9 flex items-center justify-center rounded-full border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-black/30"
+            aria-label="Toggle navigation"
+          >
+            <span class="hamburger"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Nav -->
+      <nav
+        id="mobile-nav"
+        class="md:hidden max-h-0 overflow-hidden transition-all duration-300 border-t border-slate-200/60 dark:border-white/10"
+      >
+        <div class="px-4 pb-4 pt-2 space-y-1 text-sm font-medium">
+          <a href="#home" class="mobile-nav-link">Home</a>
+          <a href="#about" class="mobile-nav-link">About</a>
+          <a href="#skills" class="mobile-nav-link">Skills</a>
+          <a href="#projects" class="mobile-nav-link">Projects</a>
+          <a href="#education" class="mobile-nav-link">Education</a>
+          <a href="#contact" class="mobile-nav-link">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="mt-24 md:mt-28">
+      <!-- Hero / Home -->
+      <section
+        id="home"
+        class="relative overflow-hidden"
+      >
+        <div
+          class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(187,134,252,0.22),_transparent_60%),radial-gradient(circle_at_bottom,_rgba(59,130,246,0.2),_transparent_55%)] opacity-80 dark:opacity-100"
+        ></div>
+
+        <div
+          class="relative max-w-6xl mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12"
+        >
+          <!-- Text -->
+          <div
+            class="md:w-3/5 space-y-6 animate-on-scroll fade-slide-up"
+          >
+            <p
+              class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-slate-200 shadow-soft"
+            >
+              <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+              Open to opportunities
+            </p>
+
+            <h1
+              class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 dark:text-white"
+            >
+              Hi, I'm
+              <span class="text-primary">Thirugnanam. P</span>
+              <span class="block text-lg sm:text-2xl md:text-3xl mt-2 font-medium">
+                Java Full-Stack Developer
+              </span>
+            </h1>
+
+            <p class="text-sm uppercase tracking-[0.26em] text-slate-500 dark:text-slate-400">
+              Crafting scalable, real-time business solutions
+            </p>
+
+            <!-- Typing Animation -->
+            <div class="mt-4">
+              <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1 uppercase">
+                Core stack & capabilities
+              </p>
+              <div
+                class="inline-flex items-center gap-2 rounded-xl bg-black/80 text-textPrimary px-3 py-2 text-sm shadow-soft border border-white/10"
+              >
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="font-mono text-[13px]">
+                  <span id="typing-prefix" class="text-slate-400">Focused on&nbsp;</span>
+                  <span id="typing-text" class="text-primary"></span>
+                  <span class="border-r border-primary ml-0.5 animate-cursor"></span>
+                </span>
+              </div>
+            </div>
+
+            <p class="text-sm md:text-base text-slate-600 dark:text-slate-300 max-w-2xl">
+              I design and build end-to-end Java applications that are reliable, secure, and
+              cloud-ready—combining clean back-end architecture with thoughtful, user-centric
+              interfaces.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4">
+              <a
+                href="https://drive.google.com/file/d/19JBt6wa-nGOfeJrAI0cmtgomjxVuVjMo/view?usp=drive_link"
+                download
+                class="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-soft hover:shadow-lg hover:bg-primary/90 transition"
+              >
+                Download Resume (PDF)
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                >
+                  <path
+                    d="M12 3v14m0 0-4-4m4 4 4-4M5 21h14"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <div class="flex flex-wrap gap-2 text-xs text-slate-500 dark:text-slate-400">
+                <span
+                  class="inline-flex items-center gap-1 rounded-full bg-white/70 dark:bg-white/5 px-3 py-1 border border-slate-200/70 dark:border-white/10"
+                >
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  Problem solving
+                </span>
+                <span
+                  class="inline-flex items-center gap-1 rounded-full bg-white/70 dark:bg-white/5 px-3 py-1 border border-slate-200/70 dark:border-white/10"
+                >
+                  Real-time business solutions
+                </span>
+                <span
+                  class="inline-flex items-center gap-1 rounded-full bg-white/70 dark:bg-white/5 px-3 py-1 border border-slate-200/70 dark:border-white/10"
+                >
+                  Scalable apps & teamwork
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile Card -->
+          <div class="md:w-2/5">
+            <div
+              class="relative max-w-md mx-auto animate-on-scroll fade-slide-up delay-200"
+            >
+              <div
+                class="absolute -inset-1 rounded-3xl bg-gradient-to-br from-primary/40 via-indigo-500/30 to-emerald-400/40 blur-2xl opacity-80"
+              ></div>
+              <div
+                class="relative rounded-3xl bg-slate-900/90 dark:bg-black/80 border border-white/10 shadow-soft p-7 flex flex-col items-center gap-5"
+              >
+                <div
+                  class="h-52 w-52 rounded-full overflow-hidden border border-white/10 shadow-lg bg-gradient-to-br from-slate-800 to-slate-900"
+                >
+                  <img
+                    src="profile.png"
+                    alt="Profile photo of Thirugnanam P"
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                <div class="text-center space-y-1">
+                  <p class="text-sm font-semibold text-white">Thirugnanam. P</p>
+                  <p class="text-xs text-slate-400">
+                    Java Full-Stack Developer
+                  </p>
+                </div>
+                <div class="grid grid-cols-3 gap-2 text-[11px] text-slate-300">
+                  <div class="mini-tag">
+                    <span class="block text-[10px] text-slate-400">Focus</span>
+                    Scalable Systems
+                  </div>
+                  <div class="mini-tag">
+                    <span class="block text-[10px] text-slate-400">Stack</span>
+                    Java · Spring · REST
+                  </div>
+                  <div class="mini-tag">
+                    <span class="block text-[10px] text-slate-400">Mindset</span>
+                    Problem Solver
+                  </div>
+                </div>
+                <div class="w-full flex items-center justify-between text-[11px] text-slate-300">
+                  <span class="inline-flex items-center gap-1">
+                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                    Real-time
+                  </span>
+                  <span>Clean Code</span>
+                  <span>Team Player</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section">
+        <div class="section-inner">
+          <div class="section-header">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">
+              A blend of engineering discipline, product thinking, and leadership.
+            </p>
+          </div>
+
+          <div
+            class="grid md:grid-cols-[minmax(0,1fr)_minmax(320px,420px)] gap-10 items-start animate-on-scroll fade-slide-up"
+          >
+            <div class="space-y-4 text-sm md:text-base text-slate-600 dark:text-slate-200 min-w-0">
+              <p>
+                Java Full-Stack Developer with expertise in architecting scalable web applications using Spring Boot, Microservices, and modern frontend technologies. Expert in transforming complex requirements into high-performance backend systems and responsive, user-centric interfaces. Specialized in secure RESTful APIs, JWT authentication, and database optimization. Committed to technical excellence and bridging the gap between clean code and tangible business value.
+              </p>
+              <p>
+                Java Full-Stack Developer specialized in building scalable Spring Boot microservices and responsive frontends. Proven track record in optimizing performance, achieving 25% faster query response times in production environments. Expert in implementing robust security features, including JWT authentication and role-based authorization.
+              </p>
+              <p>
+                Java Full-Stack Developer proficient in Spring Boot, Microservices, and RESTful API design. Skilled in developing maintainable backend systems and user-centric frontends utilizing Tailwind CSS and Bootstrap. Proven track record in optimizing software performance and collaborating in agile environments to solve complex challenges.
+              </p>
+
+              <div class="grid sm:grid-cols-3 gap-3 mt-4">
+                <div class="about-pill">
+                  <span class="about-pill-label">Problem Solving</span>
+                  <span class="about-pill-text">Breaking down complexity</span>
+                </div>
+                <div class="about-pill">
+                  <span class="about-pill-label">Real-time Solutions</span>
+                  <span class="about-pill-text">Business-focused outcomes</span>
+                </div>
+                <div class="about-pill">
+                  <span class="about-pill-label">Scalable Apps</span>
+                  <span class="about-pill-text">Future-ready architecture</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="rounded-3xl border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-white/5 p-6 shadow-soft space-y-4 snapshot-card"
+            >
+              <h3 class="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-[0.18em]">
+                Snapshot
+              </h3>
+              <dl class="space-y-3 text-sm text-slate-600 dark:text-slate-200">
+                <div class="flex justify-between gap-4">
+                  <dt class="text-slate-500 dark:text-slate-400">Experience focus</dt>
+                  <dd class="font-medium text-right">Full-stack Java web applications</dd>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <dt class="text-slate-500 dark:text-slate-400">Key strengths</dt>
+                  <dd class="font-medium text-right">
+                    Problem solving, system design, teamwork
+                  </dd>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <dt class="text-slate-500 dark:text-slate-400">Domains</dt>
+                  <dd class="font-medium text-right">Business apps, internal tools, portals</dd>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <dt class="text-slate-500 dark:text-slate-400">Leadership</dt>
+                  <dd class="font-medium text-right">
+                    Mentoring, code reviews, driving best practices
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section">
+        <div class="section-inner">
+          <div class="section-header">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-subtitle">
+              A balanced stack across Java back-end, modern front-end, and delivery tooling.
+            </p>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3 animate-on-scroll fade-slide-up">
+            <!-- Languages & IDEs -->
+            <div class="card">
+              <h3 class="card-title">Languages & IDEs</h3>
+              <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-200">
+                <li class="skill-item">
+                  <span>Core Java</span>
+                </li>
+                <li class="skill-item">
+                  <span>IntelliJ IDEA</span>
+                </li>
+                <li class="skill-item">
+                  <span>VS Code</span>
+                </li>
+                <li class="skill-item">
+                  <span>Cursor</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Frontend -->
+            <div class="card">
+              <h3 class="card-title">Front-end</h3>
+              <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-200">
+                <li class="skill-item">
+                  <span>HTML5</span>
+                </li>
+                <li class="skill-item">
+                  <span>CSS3</span>
+                </li>
+                <li class="skill-item">
+                  <span>JavaScript</span>
+                </li>
+                <li class="skill-item">
+                  <span>Tailwind CSS</span>
+                </li>
+                <li class="skill-item">
+                  <span>UX / UI design</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Backend -->
+            <div class="card">
+              <h3 class="card-title">Back-end</h3>
+              <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-200">
+                <li class="skill-item">
+                  <span>Spring Boot | Spring Framework | Spring MVC</span>
+                </li>
+                <li class="skill-item">
+                  <span>RESTful APIs</span>
+                </li>
+                <li class="skill-item">
+                  <span>Spring Security | Spring Thymeleaf</span>
+                </li>
+                <li class="skill-item">
+                  <span>Microservices</span>
+                </li>
+                <li class="skill-item">
+                  <span>Postman</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Databases -->
+            <div class="card">
+              <h3 class="card-title">Databases & TESTING</h3>
+              <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-200">
+                <li class="skill-item">
+                  <span>MySQL</span>
+                </li>
+                <li class="skill-item">
+                  <span>MongoDB</span>
+                </li>
+                <li class="skill-item">
+                  <span>JUNIT | Mockito</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tools & DevOps -->
+            <div class="card">
+              <h3 class="card-title">Tools & DevOps</h3>
+              <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-200">
+                <li class="skill-item">
+                  <span>Git & GitHub</span>
+                </li>
+                <li class="skill-item">
+                  <span>Docker</span>
+                </li>
+                <li class="skill-item">
+                  <span>Railway | Netlify | Render</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <div class="section-inner">
+          <div class="section-header">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">
+              Selected work that showcases end-to-end thinking from data model to user interface.
+            </p>
+          </div>
+
+          <div class="space-y-8 animate-on-scroll fade-slide-up">
+            <!-- Project 1 -->
+            <article class="project-card">
+              <div class="project-card-header">
+                <div>
+                  <h3 class="project-title">Movie Ticket Booking System</h3>
+                  <p class="project-subtitle">
+                    End-to-end booking platform for cinema chains with real-time seat selection,
+                    pricing rules, and secure payments.
+                  </p>
+                </div>
+                <a
+                  href="https://github.com/Thirugnanam2001/Project-3"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-link"
+                >
+                  View on GitHub
+                </a>
+              </div>
+
+              <div class="project-body">
+                <p class="project-description">
+                  Movie Ticket Booking System is a full-stack web application designed for fast,
+                  secure, and user-friendly ticket reservations. The platform features an intuitive
+                  modern UI/UX with professional typography and styling, enabling users to browse
+                  movies, select theatres, choose seats, and complete bookings seamlessly. Built
+                  with Core Java and Spring Boot, the application implements robust security for
+                  user accounts with secure login and signup flows, and follows a clean MVC
+                  architecture with clearly separated config, controller, service, repository, and
+                  entity layers. The system persists data in MySQL, supports PDF ticket generation
+                  for confirmations, and is containerized with Docker and deployed to Railway using
+                  GitHub-based workflows for a production-like environment.
+                </p>
+
+                <ul class="project-highlights">
+                  <li>Real-time seat locking with conflict-safe booking flows.</li>
+                  <li>showtime, and pricing configuration.</li>
+                </ul>
+
+                <div class="project-meta">
+                  <div class="project-tags">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>Spring Security</span>
+                    <span>REST API</span>
+                    <span>Thymeleaf</span>
+                    <span>MySQL</span>
+                    <span>Html&CSS</span>
+                    <span>Docker</span>
+                    <span>Github</span>
+                  </div>
+                </div>
+
+                <!-- Image carousel -->
+                <div class="project-carousel-wrapper">
+                  <button
+                    class="carousel-btn left"
+                    data-carousel-control="movie-booking"
+                    data-direction="prev"
+                    aria-label="Previous screenshot"
+                  >
+                    ‹
+                  </button>
+                  <div
+                    class="project-carousel"
+                    data-carousel="movie-booking"
+                  >
+                    <img
+                      src="mtb-1.png"
+                      alt="Movie ticket booking dashboard UI"
+                      class="project-image"
+                    />
+                    <img
+                    src="mtb-2.png"
+                    alt="Movie ticket booking dashboard UI"
+                    class="project-image"
+                  />
+                  <img
+                  src="mtb-3.png"
+                  alt="Movie ticket booking dashboard UI"
+                  class="project-image"
+                />
+                    <img
+                      src="mtb-4.png"
+                      alt="Showtime and seat selection screen"
+                      class="project-image"
+                    />
+                    <img
+                    src="mtb-5.png"
+                    alt="Movie ticket booking dashboard UI"
+                    class="project-image"
+                    />
+                    <img
+                      src="mtb-6.png"
+                      alt="Booking confirmation and payment summary"
+                      class="project-image"
+                    />
+                    <img
+                    src="mtb-7.png"
+                    alt="Movie ticket booking dashboard UI"
+                    class="project-image"
+                  />
+                  <img
+                  src="mtb-8.png"
+                  alt="Movie ticket booking dashboard UI"
+                  class="project-image"
+                  />
+                  <img
+                  src="mtb-9.png"
+                  alt="Movie ticket booking dashboard UI"
+                  class="project-image"
+                  />
+                    <img
+                      src="mtb-10.png"
+                      alt="Admin panel for theatre management"
+                      class="project-image"
+                    />
+                    <img
+                    src="mtb-11.png"
+                    alt="Movie ticket booking dashboard UI"
+                    class="project-image"
+                    />
+                    <img
+                      src="mtb-12.png"
+                      alt="Reports and analytics view"
+                      class="project-image"
+                    />
+                    <img
+                    src="mtb-13.png"
+                    alt="Movie ticket booking dashboard UI"
+                    class="project-image"
+                  />
+                  <img
+                  src="mtb-14.png"
+                  alt="Movie ticket booking dashboard UI"
+                  class="project-image"
+                  />
+                  <img
+                  src="mtb-15.png"
+                  alt="Movie ticket booking dashboard UI"
+                  class="project-image"
+                  />
+                  <img
+                  src="mtb-16.png"
+                  alt="Movie ticket booking dashboard UI"
+                  class="project-image"
+                  />
+                  <img
+                  src="mtb-17.png"
+                  alt="Movie ticket booking dashboard UI"
+                  class="project-image"
+                  />
+                  <img
+                  src="mtb-18.png"
+                  alt="Movie ticket booking dashboard UI"
+                  class="project-image"
+                  />
+                  </div>
+                  <button
+                    class="carousel-btn right"
+                    data-carousel-control="movie-booking"
+                    data-direction="next"
+                    aria-label="Next screenshot"
+                  >
+                    ›
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card">
+              <div class="project-card-header">
+                <div>
+                  <h3 class="project-title">Smart Spend Expense (SCE)</h3>
+                  <p class="project-subtitle">
+                    Financial management platform for tracking, analysing, and controlling daily
+                    expenses with rich visual insights.
+                  </p>
+                </div>
+                <a
+                  href="https://github.com/Thirugnanam2001/Project-2"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-link"
+                >
+                  View on GitHub
+                </a>
+              </div>
+
+              <div class="project-body">
+                <p class="project-description">
+                  Smart Spend Expense is a robust financial management application designed
+                  to help customers track, analyse, and control their expenses through an intuitive
+                  and secure platform. The system provides a comprehensive dashboard with visual
+                  charts for expense tracking, allowing users to add, categorise, and monitor
+                  spending patterns in real time. Built with Spring Boot and Core Java, the
+                  application follows a clean MVC structure with dedicated config, controller,
+                  model, repository, and service layers for maintainable, scalable code. It uses
+                  MySQL for persistent storage and integrates libraries such as iTextPDF and Apache
+                  POI to export detailed reports in PDF and Excel formats, all wrapped in a modern,
+                  responsive Bootstrap UI and deployed via Docker containers on Railway.
+                </p>
+
+                <ul class="project-highlights">
+                  <li>Customizable categories with rule-based auto-tagging of expenses.</li>
+                  <li>Timeline and chart views for spending patterns and savings goals.</li>
+                </ul>
+
+                <div class="project-meta">
+                  <div class="project-tags">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>REST API</span>
+                    <span>MySQL</span>
+                    <span>Tailwind CSS</span>
+                    <span>JavaScript</span>
+                    <span>Html&CSS</span>
+                    <span>Docker</span>
+                    <span>Github</span>
+                  </div>
+                </div>
+
+                <!-- Image carousel for Smart Spend Expense -->
+                <div class="project-carousel-wrapper">
+                  <button
+                    class="carousel-btn left"
+                    data-carousel-control="sce"
+                    data-direction="prev"
+                    aria-label="Previous screenshot"
+                  >
+                    ‹
+                  </button>
+                  <div
+                    class="project-carousel"
+                    data-carousel="sce"
+                  >
+                    <img
+                      src="sce-1.png"
+                      alt="Smart Spend Expense dashboard overview"
+                      class="project-image"
+                    />
+                    <img
+                      src="sce-2.png"
+                      alt="Smart Spend Expense add transaction screen"
+                      class="project-image"
+                    />
+                    <img
+                      src="sce-3.png"
+                      alt="Smart Spend Expense category-wise expense chart"
+                      class="project-image"
+                    />
+                    <img
+                      src="sce-4.png"
+                      alt="Smart Spend Expense report download page"
+                      class="project-image"
+                    />
+                  </div>
+                  <button
+                    class="carousel-btn right"
+                    data-carousel-control="sce"
+                    data-direction="next"
+                    aria-label="Next screenshot"
+                  >
+                    ›
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card">
+              <div class="project-card-header">
+                <div>
+                  <h3 class="project-title">Online Courses Platform (LMS)</h3>
+                  <p class="project-subtitle">
+                    Full-stack online learning platform for secure course enrolment and digital
+                    content delivery.
+                  </p>
+                </div>
+                <a
+                  href="https://github.com/Thirugnanam2001/Project-1"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-link"
+                >
+                  View on GitHub
+                </a>
+              </div>
+
+              <div class="project-body">
+                <p class="project-description">
+                  Online Courses Platform is a comprehensive full-stack web application developed to
+                  provide students with fast, secure, and intuitive access to digital learning
+                  resources. The system offers a student-friendly interface with professional UI/UX
+                  design, seamless course enrolment, powerful search, and personalised user
+                  dashboards. Built with Spring Boot and Core Java, it follows a robust MVC
+                  architecture with clearly defined controllers, services, entities, repositories,
+                  and configuration classes for clean separation of concerns. Using Thymeleaf for
+                  server-side rendering, MySQL for persistent storage, and Bootstrap for responsive
+                  layouts, the platform supports full admin course management, secure
+                  authentication, contact management, and deployment via Docker and Netlify for an
+                  end-to-end production-ready online learning experience.
+                </p>
+
+                <ul class="project-highlights">
+                  <li>Role-based access for admins, instructors, and learners.</li>
+                  <li>Module-based content with assessments and progress tracking.</li>
+                </ul>
+
+                <div class="project-meta">
+                  <div class="project-tags">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>Spring Security</span>
+                    <span>Thymeleaf</span>
+                    <span>MySQL</span>
+                    <span>Html&CSS</span>
+                    <span>Docker</span>
+                    <span>Github</span>
+                  </div>
+                </div>
+
+                <!-- Image carousel -->
+                <div class="project-carousel-wrapper">
+                  <button
+                    class="carousel-btn left"
+                    data-carousel-control="lms"
+                    data-direction="prev"
+                    aria-label="Previous screenshot"
+                  >
+                    ‹
+                  </button>
+                  <div
+                    class="project-carousel"
+                    data-carousel="lms"
+                  >
+                    <img
+                      src="on-1.png"
+                      alt="LMS course dashboard UI"
+                      class="project-image"
+                    />
+                    <img
+                      src="on-2.png"
+                      alt="Module and lesson view"
+                      class="project-image"
+                    />
+                    <img
+                      src="on-3.png"
+                      alt="Assessment and grading screen"
+                      class="project-image"
+                    />
+                    <img
+                      src="on-5.png"
+                      alt="Student progress analytics"
+                      class="project-image"
+                    />
+                    <img
+                      src="on-6.png"
+                      alt="Student progress analytics"
+                      class="project-image"
+                    />
+                    <img
+                      src="on-7.png"
+                      alt="Student progress analytics"
+                      class="project-image"
+                    />
+                    <img
+                      src="on-8.png"
+                      alt="Student progress analytics"
+                      class="project-image"
+                    />
+                    <img
+                      src="on-9.png"
+                      alt="Student progress analytics"
+                      class="project-image"
+                    />
+                  </div>
+                  <button
+                    class="carousel-btn right"
+                    data-carousel-control="lms"
+                    data-direction="next"
+                    aria-label="Next screenshot"
+                  >
+                    ›
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="section">
+        <div class="section-inner">
+          <div class="section-header">
+            <h2 class="section-title">Education & Certifications</h2>
+            <p class="section-subtitle">
+              Formal education combined with continuous, hands-on learning.
+            </p>
+          </div>
+
+          <div
+            class="grid gap-8 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-start animate-on-scroll fade-slide-up"
+          >
+            <div class="space-y-6">
+              <!-- Degree -->
+              <div class="edu-card">
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 class="edu-title">Master of Arts in Anthropology</h3>
+                    <p class="edu-subtitle">
+                      University of madras, Chennai
+                    </p>
+                  </div>
+                  <span class="edu-badge">2022 - 2024</span>
+                </div>
+                <p class="edu-description">
+                  Completed an advanced curriculum focused on sociocultural dynamics, ethnographic research methodologies, and human evolution. Developed strong analytical skills through fieldwork and data collection, specializing in the study of [Insert Specialization, e.g., Urban Anthropology or Tribal Studies] within the South Asian context. Successfully defended a thesis titled "[Insert Thesis Title]," demonstrating a deep understanding of complex social structures and cultural heritage preservation.
+                </p>
+              </div>
+
+              <!-- Certification 1 -->
+              <div class="edu-card">
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 class="edu-title">Bachelor of Arts in History(Vocational)</h3>
+                    <p class="edu-subtitle">
+                      Madras Christian College, Chennai
+                    </p>
+                  </div>
+                  <span class="edu-badge">2019 - 2022</span>
+                </div>
+                <p class="edu-description">
+                Completed a comprehensive program focused on the preservation of cultural heritage, historical research methodologies, and the principles of museum curation. Developed a strong foundation in analyzing primary source materials and managing historical records with an emphasis on South Indian history. Gained specialized knowledge in the documentation and classification of artifacts, preparing for roles in archival management, cultural administration, and historical education.
+                </p>
+              </div>
+
+              <!-- Certification 2 -->
+              <div class="edu-card">
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 class="edu-title">Guvi Certification-Java Full-Stack Web Development</h3>
+                    <p class="edu-subtitle">
+                      Online Program, Guvi|HCL, chennai
+                    </p>
+                  </div>
+                  <span class="edu-badge">2025</span>
+                </div>
+                <p class="edu-description">
+                  Covered responsive UI design, JavaScript fundamentals, API integration, and
+                  modern tooling with an emphasis on building production-like applications. Focused on data structures, algorithms, software engineering principles, and
+                  distributed systems with practical exposure to building full-stack applications
+                  using Java technologies. Hands-on specialization in building RESTful services, securing applications,
+                  integrating databases, and deploying Spring Boot microservices.
+                </p>
+              </div>
+            </div>
+
+            <!-- Certification image -->
+            <div
+              class="rounded-3xl border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-white/5 p-4 shadow-soft flex flex-col gap-4"
+            >
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+                    Sample Certificate
+                  </p>
+                  <p class="text-sm font-semibold text-slate-900 dark:text-white">
+                    Java & Spring Boot Excellence
+                  </p>
+                </div>
+              </div>
+              <div
+                class="relative rounded-2xl overflow-hidden border border-dashed border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-900/60 aspect-video"
+              >
+                <img
+                  src="GuviCertification.png"
+                  alt="Sample certification for Java and Spring Boot"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <div class="section-inner">
+          <div class="section-header">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">
+              Let's talk about building reliable, scalable Java applications together.
+            </p>
+          </div>
+
+          <div
+            class="grid gap-10 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-start animate-on-scroll fade-slide-up"
+          >
+            <!-- Contact Form -->
+            <form
+              class="card space-y-4"
+              action="mailto:thirugnanamcode83@gmail.com"
+              method="post"
+              enctype="text/plain"
+            >
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label class="form-label" for="name">Name</label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    class="form-input"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label class="form-label" for="email">Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    class="form-input"
+                    placeholder="you@example.com"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label class="form-label" for="subject">Subject</label>
+                <input
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  required
+                  class="form-input"
+                  placeholder="Project idea or opportunity"
+                />
+              </div>
+
+              <div>
+                <label class="form-label" for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                  class="form-input resize-none"
+                  placeholder="Briefly describe what you would like to discuss."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-soft hover:shadow-lg hover:bg-primary/90 transition"
+              >
+                Send Email
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                >
+                  <path
+                    d="M4 4h16v16H4z"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="m5 6 7 6 7-6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </form>
+
+            <!-- Direct contact info -->
+            <div class="space-y-5">
+              <div class="card space-y-3">
+                <p class="text-sm font-semibold text-slate-900 dark:text-white">
+                  Direct Contact
+                </p>
+                <p class="text-sm text-slate-600 dark:text-slate-200">
+                  Prefer email? Reach out with a short description of your requirement, and I will
+                  respond with next steps, timelines, and how I can help.
+                </p>
+                <div class="space-y-2 text-sm text-slate-600 dark:text-slate-200">
+                  <p>
+                    <span class="font-medium">Email:</span>
+                    <a
+                      href="mailto:thirugnanamcode83@gmail.com"
+                      class="text-primary hover:underline"
+                      >thirugnanamcode83@gmail.com</a
+                    >
+                  </p>
+                  <p>
+                    <span class="font-medium">Location:</span>
+                    Chennai, India (Open to remote)
+                  </p>
+                </div>
+              </div>
+
+              <div class="card space-y-3">
+                <p class="text-sm font-semibold text-slate-900 dark:text-white">
+                  Connect
+                </p>
+                <div class="flex flex-wrap gap-3">
+                  <a
+                    href="https://www.linkedin.com/in/thirugnanam-p-0b3ba830b"
+                    target="_blank"
+                    rel="noopener"
+                    class="chip-link"
+                  >
+                    LinkedIn
+                  </a>
+                  <a
+                    href="https://github.com/Thirugnanam2001"
+                    target="_blank"
+                    rel="noopener"
+                    class="chip-link"
+                  >
+                    GitHub
+                  </a>
+                  <a
+                    href="https://drive.google.com/file/d/19JBt6wa-nGOfeJrAI0cmtgomjxVuVjMo/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener"
+                    class="chip-link"
+                  >
+                    Resume (Drive / PDF)
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="border-t border-slate-200 dark:border-white/10 bg-white/80 dark:bg-black/40 backdrop-blur-md mt-10"
+    >
+      <div class="max-w-6xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-xs text-slate-500 dark:text-slate-400">
+          © <span id="year"></span> Thirugnanam. P · Java Full-Stack Developer
+        </p>
+        <div class="flex items-center gap-3 text-slate-500">
+          <a
+            href="https://www.linkedin.com/in/thirugnanam-p-0b3ba830b"
+            aria-label="LinkedIn"
+            class="icon-btn"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="h-4 w-4"
+              fill="currentColor"
+            >
+              <path
+                d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.3 8.18h4.4V24H.3V8.18zM8.79 8.18h4.22v2.15h.06c.59-1.12 2.03-2.3 4.18-2.3 4.47 0 5.3 2.94 5.3 6.77V24h-4.4v-7.21c0-1.72-.03-3.93-2.39-3.93-2.39 0-2.76 1.87-2.76 3.8V24H8.79V8.18z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://github.com/Thirugnanam2001"
+            aria-label="GitHub"
+            class="icon-btn"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="h-4 w-4"
+              fill="currentColor"
+            >
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.05-.02-2.06-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.35-1.76-1.35-1.76-1.1-.76.08-.75.08-.75 1.22.09 1.87 1.26 1.87 1.26 1.08 1.85 2.84 1.32 3.53 1.01.11-.78.42-1.32.76-1.62-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.24-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.05.14 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.85 1.24 1.92 1.24 3.24 0 4.63-2.8 5.66-5.48 5.96.43.37.81 1.1.81 2.22 0 1.6-.02 2.88-.02 3.27 0 .32.22.7.82.58A12.01 12.01 0 0 0 24 12C24 5.37 18.63 0 12 0z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://drive.google.com/file/d/19JBt6wa-nGOfeJrAI0cmtgomjxVuVjMo/view?usp=drive_link"
+            aria-label="Resume"
+            class="icon-btn"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="h-4 w-4"
+              fill="currentColor"
+            >
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6zm1 7V3.5L18.5 9H15z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
